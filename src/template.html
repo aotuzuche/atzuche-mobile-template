@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en" data-dpr="3">
+
 <head>
   <link rel="dns-prefetch" href="//carphoto.atzuche.com" />
   <link rel="preload" href="//carphoto.atzuche.com/web/auto/js/libs/v2/react.js" as="script" />
   <link rel="preload" href="//carphoto.atzuche.com/web/auto/js/libs/v2/core.js" as="script" />
 
   <meta charset="utf-8" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta name="format-detection" content="telephone=no, email=no" />
@@ -15,37 +16,34 @@
   <meta name="apple-mobile-web-app-title" content="凹凸租车" />
   <meta name="theme-color" content="#00bb55" />
 
-  <meta name="keywords" content="凹凸，凹凸租车，凹凸租车官网，租车公司，租车网，自驾游，自驾租车，汽车租赁，共享汽车"/>
-  <meta name="description" content="凹凸租车（atzuche.com）是领先的私家车共享平台，致力于为用户提供便捷的自驾租车、旅游租车、商务用车、分时租赁、试驾等汽车出行服务。万款车型可以为追求自驾乐趣的你提供全新的个性化体验，独家管家服务可以让你享受随时随地的租车体验。"/>
-
-  <script defer>
-    !function(N,M){function L(){var a=I.getBoundingClientRect().width;var d=a/(375*F)*100*F/2;d-=(d-50*F)/2;d=Math.round(d);I.style.fontSize=d+"px",D.rem=N.rem=d;window.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("has meta");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no, viewport-fit=cover"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c},window.dpr=F;var ua=navigator.userAgent;N.isApp=(/atzuche/gi).test(ua);N.isWX=(/MicroMessenger/gi).test(ua);if(N.isWX){var s=N.location.search,ls=N.localStorage,ss=N.sessionStorage;var t=((/[?&]token=(.*?)(&|$)/).exec(s)||[])[1];if(t){ls.setItem('_app_token_',t);};var o=((/[?&]openId=(.*?)(&|$)/).exec(s)||[])[1];if(o){ss.setItem('_app_openId_',o)};var u=((/[?&]unionId=(.*?)(&|$)/).exec(s)||[])[1];if(u){ss.setItem('_app_unionId_',u)};var v=((/[?&]virtualNo=(.*?)(&|$)/).exec(s)||[])[1];if(v){ss.setItem('_app_virtualNo_',v)};var m=((/[?&]memNo=(.*?)(&|$)/).exec(s)||[])[1];if(m){ss.setItem('_app_memNo_',m)};}}(window,{});
-  </script>
-
+  <meta name="keywords" content="凹凸，凹凸租车，凹凸租车官网，租车公司，租车网，自驾游，自驾租车，汽车租赁，共享汽车" />
+  <meta name="description" content="凹凸租车（atzuche.com）是领先的私家车共享平台，致力于为用户提供便捷的自驾租车、旅游租车、商务用车、分时租赁、试驾等汽车出行服务。万款车型可以为追求自驾乐趣的你提供全新的个性化体验，独家管家服务可以让你享受随时随地的租车体验。"
+  />
 </head>
 
 <body>
 
-<div id="root"></div>
+  <div id="root"></div>
 
-<script src="//carphoto.atzuche.com/web/auto/js/libs/v2/react.js"></script>
-<script src="//carphoto.atzuche.com/web/auto/js/libs/v2/core.js"></script>
+  <script src="//carphoto.atzuche.com/web/auto/js/libs/v2/react.js"></script>
+  <script src="//carphoto.atzuche.com/web/auto/js/libs/v2/core.js"></script>
 
-<script>
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?940ac302dc9436169f5e98f17aca1589";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-</script>
+  <script>
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?940ac302dc9436169f5e98f17aca1589";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
-<script>
-  (function() {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js');
-    }
-  })();
-</script>
+  <script>
+    (function () {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js');
+      }
+    })();
+  </script>
 </body>
+
 </html>

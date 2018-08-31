@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HappyPack = require('happypack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+const InlineScriptPlugin = require('./inline-script-plugin')
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -116,6 +117,8 @@ const webpackConfig = {
       },
       chunksSortMode: 'dependency' // 按照不同文件的依赖关系来排序
     }),
+
+    new InlineScriptPlugin('flexible'),
 
     // 提取公共样式
     new MiniCssExtractPlugin({

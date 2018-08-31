@@ -51,6 +51,12 @@ const webpackConfig = merge(baseWebpackConfig, {
           },
           enforce: true,
         },
+        flexible: {
+          name: 'flexible',
+          chunks: 'all',
+          test: /flexible\.js$/,
+          enforce: true,
+        }
       },
     },
     // 分割运行时代码

@@ -6,6 +6,7 @@ window.Map = require('es6-map')
 // reset css
 import 'src/assets/css/reset'
 
+import 'src/assets/js/flexible'
 // some utils
 import 'src/utils/inputEvents'
 import 'src/utils/dateFormat'
