@@ -1,6 +1,9 @@
 # CHANGELOG
 > 记录脚手架文件变动
 
+### 2018-08-31 10:16:52
+1. appConfig.js 增加端口、代理地址配置和 html title
+
 ### 2018-08-28 18:00:00
 1. 修改pwa插件会把index.html离线的问题
 2. 修改button组件children包装标签的方式

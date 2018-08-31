@@ -6,6 +6,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const Visualizer = require('webpack-visualizer-plugin')
 const baseWebpackConfig = require('./webpack.base.conf')
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 // 针对发布环境修改配置
 const webpackConfig = merge(baseWebpackConfig, {
@@ -89,6 +90,8 @@ const webpackConfig = merge(baseWebpackConfig, {
 
     // js包大小的报告，会生成stats.html于根目录下
     new Visualizer(),
+
+    // new BundleAnalyzerPlugin()
   ],
 
   output: {

@@ -4,7 +4,7 @@ const config = require('./conf')
 const utils = require('./utils')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-
+const APP_CONFIG = require('../appConfig.js')
 
 const baseWebpackConfig = require('./webpack.base.conf')
 // 针对生产环境修改配置
@@ -15,14 +15,13 @@ const webpackConfig = merge(baseWebpackConfig, {
     path: config[process.env.PACKAGE].assetsRoot,
     filename: utils.assetsPath('js/[name].js'),
     chunkFilename: utils.assetsPath('js/[name].js'),
-    publicPath: config[process.env.PACKAGE].assetsPublicPath,
+    publicPath: config[process.env.PACKAGE].assetsPublicPath
   },
 
   plugins: [
-
     // 设置环境变量
     new webpack.DefinePlugin({
-      'process.env.PACKAGE': JSON.stringify(process.env.PACKAGE),
+      'process.env.PACKAGE': JSON.stringify(process.env.PACKAGE)
     }),
 
     // 热更新
@@ -31,9 +30,12 @@ const webpackConfig = merge(baseWebpackConfig, {
     // 美化本地开发时的终端界面
     new FriendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {
-        messages: ['You application is running here http://localhost:' + config[process.env.PACKAGE].port],
-      },
-    }),
+        messages: [
+          'You application is running here http://localhost:' +
+            config[process.env.PACKAGE].port
+        ]
+      }
+    })
   ],
 
   devServer: {
@@ -44,18 +46,18 @@ const webpackConfig = merge(baseWebpackConfig, {
     inline: true,
     quiet: true,
     disableHostCheck: true,
-    port: config[process.env.PACKAGE].port,
+    port: APP_CONFIG.port,
     proxy: {
       '/proxy/*': {
-        target: 'http://test3-web.autozuche.com/',
+        target: APP_CONFIG.target,
         pathRewrite: {
-          '^/proxy/': '/',
+          '^/proxy/': '/'
         },
         changeOrigin: true,
-        secure: false,
-      },
-    },
-  },
+        secure: false
+      }
+    }
+  }
 })
 
 module.exports = webpackConfig
