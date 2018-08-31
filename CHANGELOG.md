@@ -3,6 +3,7 @@
 
 ### 2018-08-31 10:16:52
 1. appConfig.js 增加端口、代理地址配置和 html title
+2. 抽出 flexible 文件
 
 ### 2018-08-28 18:00:00
 1. 修改pwa插件会把index.html离线的问题

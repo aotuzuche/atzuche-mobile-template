@@ -19,12 +19,25 @@ class InlineScriptPlugin {
         (data, cb) => {
           const manifestAssetName = this.getAssetName(compilation.chunks, name)
 
+          console.log('manifestAssetName', manifestAssetName)
+
           if (manifestAssetName) {
             ['head', 'body'].forEach(section => {
-              data['head'] = this.inlineWhenMatched(
+              data[section] = this.inlineWhenMatched(
                 compilation,
                 data[section],
                 manifestAssetName
+              )
+            })
+
+            data['head'].push({
+              tagName: 'script',
+              closeTag: true,
+              attributes: {
+                type: 'text/javascript'
+              },
+              innerHTML: sourceMappingURL.removeFrom(
+                compilation.assets[manifestAssetName].source()
               )
             })
           }
@@ -43,22 +56,13 @@ class InlineScriptPlugin {
   }
 
   inlineWhenMatched(compilation, scripts, manifestAssetName) {
-    return scripts.map(function(script) {
+    return scripts.filter(function(script) {
       const isManifestScript =
         script.tagName === 'script' &&
         script.attributes.src.indexOf(manifestAssetName) >= 0
 
       if (isManifestScript) {
-        return {
-          tagName: 'script',
-          closeTag: true,
-          attributes: {
-            type: 'text/javascript'
-          },
-          innerHTML: sourceMappingURL.removeFrom(
-            compilation.assets[manifestAssetName].source()
-          )
-        }
+        return false
       }
 
       return script
