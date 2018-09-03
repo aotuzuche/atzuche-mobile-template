@@ -6,7 +6,9 @@ window.Map = require('es6-map')
 // reset css
 import 'src/assets/css/reset'
 
+// 使用老淘宝的 flexible 布局方案
 import 'src/assets/js/flexible'
+
 // some utils
 import 'src/utils/inputEvents'
 import 'src/utils/dateFormat'
@@ -44,7 +46,7 @@ render(
   <Provider store={store}>
     <Routers />
   </Provider>,
-  document.getElementById('root'),
+  document.getElementById('root')
 )
 
 // >>>
