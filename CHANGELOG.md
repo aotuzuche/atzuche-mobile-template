@@ -1,6 +1,9 @@
 # CHANGELOG
 > 记录脚手架文件变动
 
+### 2018-09-03 16:13:42
+1. 添加 editorconfig
+
 ### 2018-08-31 10:16:52
 1. appConfig.js 增加端口、代理地址配置和 html title
 2. 抽出 flexible 文件
