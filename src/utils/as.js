@@ -1,6 +1,6 @@
 import qs from 'qs'
 
-async function AS(data) {
+async function AS(data = {}) {
   let params = []
   if (typeof data.eventContent === 'object') {
     Object.entries(data.eventContent).forEach(([key, value]) => {

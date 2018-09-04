@@ -4,7 +4,6 @@
 // const SomeAsyncComponent = AsyncComponent(e => import('src/xxx/xxx'))
 
 import React, { PureComponent } from 'react'
-import VL from 'src/utils/viewListen'
 
 const AsyncComponent = comp => {
   class Comp extends PureComponent {
@@ -17,9 +16,6 @@ const AsyncComponent = comp => {
     }
 
     componentDidMount() {
-      // 监听页面变化
-      VL.listen(window.location.pathname)
-
       if (this.hasLoadedComponent()) {
         return
       }

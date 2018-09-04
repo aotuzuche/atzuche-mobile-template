@@ -4,9 +4,10 @@
 
 ### 2018-09-04 11:25:07
 
-1. 添加 src/utils/as.js 文件，统计埋点
-2. 添加 src/utils/wx.js 文件，微信分享
-3. 添加 src/utils/viewListen.js 文件，监听页面变化，优化 asyncComponent.jsx 逻辑
+1. 添加 as.js 文件，统计埋点
+2. 添加 wx.js 文件，微信分享
+3. 添加 tool.js 高阶组件，抽离出 view.js 中功能相关的方法
+4. 剥离 view.js 高阶组件中功能方法，纯粹为页面高阶组件，增加微信分享方法和微信分享初始化
 
 ### 2018-09-03 16:13:42
 

@@ -9,19 +9,21 @@
  */
 
 import connect from 'src/redux/connect'
-import qs from 'qs'
+import { WXShare } from 'src/utils/wx'
 
 const VIEW = Comp => {
   @connect
   class VIEWComponent extends Comp {
-    get search() {
-      return this.props.location
-        ? qs.parse(this.props.location.search.replace(/^\?/, ''))
-        : {}
+    constructor(props) {
+      super(props)
+
+      // 初始化微信分享
+      this.WXShare()
     }
 
-    get params() {
-      return this.props.match ? this.props.match.params : {}
+    // 微信分享
+    WXShare(config) {
+      return WXShare(config)
     }
 
     render() {
