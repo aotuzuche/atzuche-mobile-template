@@ -15,7 +15,7 @@ const Routes = e => {
       <Switch>
         <Route exact path="/" component={ViewRedux} />
         <Route exact path="/index2" component={ViewRedux2} />
-        <Redirect to="/index" />
+        <Redirect to="/" />
       </Switch>
     </BrowserRouter>
   )

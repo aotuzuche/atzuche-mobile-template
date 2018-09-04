@@ -6,6 +6,7 @@
 
 1. 添加 src/utils/as.js 文件，统计埋点
 2. 添加 src/utils/wx.js 文件，微信分享
+3. 添加 src/utils/viewListen.js 文件，监听页面变化，优化 asyncComponent.jsx 逻辑
 
 ### 2018-09-03 16:13:42
 
