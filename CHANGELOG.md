@@ -2,6 +2,53 @@
 
 > 记录脚手架  文件变动
 
+### 2018-09-05 14:45:18
+
+1. 升级 babel 的版本，支持写法
+
+可选链
+
+```js
+const obj = {}
+
+obj?.a?.b?.c
+```
+
+绑定
+
+```js
+obj::func // 等价于 func.bind(obj)
+::obj.func  // 等价于 obj.func.bind(obj)
+```
+
+管道操作符
+
+```js
+function doubleSay(str) {
+  return str + ', ' + str
+}
+function capitalize(str) {
+  return str[0].toUpperCase() + str.substring(1)
+}
+function exclaim(str) {
+  return str + '!'
+}
+
+let result = "hello" |> doubleSay |> capitalize |> exclaim;result //=> "Hello, hello!"
+```
+
+逻辑操作符
+```js
+a ||= b;
+a || (a = b);
+
+a &&= b;
+a && (a = b);
+
+a ??= b;
+a ?? (a = b);
+```
+
 ### 2018-09-04 11:25:07
 
 1. 添加 as.js 文件，统计埋点

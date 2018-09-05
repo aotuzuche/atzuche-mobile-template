@@ -15,6 +15,8 @@ export default class View extends PureComponent {
     this.state = {
       loading: false
     }
+
+    console.log('test', this?.state?.a?.b)
     this.WXShare()
     this.AS()
   }
