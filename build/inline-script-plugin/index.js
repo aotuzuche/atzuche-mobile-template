@@ -19,8 +19,6 @@ class InlineScriptPlugin {
         (data, cb) => {
           const manifestAssetName = this.getAssetName(compilation.chunks, name)
 
-          console.log('manifestAssetName', manifestAssetName)
-
           if (manifestAssetName) {
             ['head', 'body'].forEach(section => {
               data[section] = this.inlineWhenMatched(

@@ -914,7 +914,8 @@ module.exports = {
   },
   settings: {
     react: {
-      pragma: 'React' // Pragma to use, default to "React"
+      pragma: 'React', // Pragma to use, default to "React"
+      version: '16.3.2'
     }
   }
 }
