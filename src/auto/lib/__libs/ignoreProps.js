@@ -1,5 +1,5 @@
 function isType(target, type) {
-  let targetType = ({}).toString.call(target).toLowerCase()
+  let targetType = {}.toString.call(target).toLowerCase()
   type = `[object ${type}]`.toLowerCase()
 
   return targetType === type
@@ -8,14 +8,11 @@ function isType(target, type) {
 function ignore(target, rule) {
   if (!target) {
     throw new TypeError('"target" is null or not defined.')
-  }
-  else if (!rule) {
+  } else if (!rule) {
     throw new TypeError('"rule" is null or not defined.')
-  }
-  else if (!isType(target, 'object')) {
+  } else if (!isType(target, 'object')) {
     throw new TypeError('"target" must be typeof object.')
-  }
-  else if (!isType(rule, 'string') && !isType(rule, 'array')) {
+  } else if (!isType(rule, 'string') && !isType(rule, 'array')) {
     throw new TypeError('"rule" must be typeof string or array.')
   }
 
@@ -29,7 +26,7 @@ function ignore(target, rule) {
 
   const resObject = {}
 
-  Object.entries(target).forEach(function (item) {
+  Object.entries(target).forEach(function(item) {
     if (rule.indexOf(item[0]) === -1) {
       resObject[item[0]] = item[1]
     }
@@ -38,4 +35,4 @@ function ignore(target, rule) {
   return resObject
 }
 
-module.exports = ignore
+export default ignore
