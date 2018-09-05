@@ -20,12 +20,13 @@ async function WXShare(config = {}) {
 
     wx.ready(() => {
       const currentOrigin = window.location.origin
+      const protocol = window.location.protocol
       let shareLink =
         `${currentOrigin}/weixinauth/authorize?type=base&redirectUri=` +
         encodeURIComponent(config.url || `${currentOrigin}/m/index`)
       const shareImg =
         config.sharePicUrl ||
-        'http://carphoto.atzuche.com/web/auto/assets/imgs/logo.png'
+        `${protocol}//carphoto.aotuzuche.com/web/auto/assets/imgs/logo.png`
 
       const result = {
         title: config.shareTitle || '凹凸租车', // 分享标题
@@ -53,10 +54,12 @@ async function WXShare(config = {}) {
 async function _getTicket() {
   const _url = encodeURIComponent(window.location.href.split('#')[0])
 
-  await http.request({
+  const result = await http.request({
     method: 'get',
     url: `/wechatgw/jsapi/ticket?url=${_url}`
   })
+
+  return result
 }
 
 export { WXShare }

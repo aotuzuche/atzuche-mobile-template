@@ -4,7 +4,9 @@
 
 ### 2018-09-05 14:45:18
 
-1. 升级 babel 的版本，支持写法
+1. 修改 auto-prod-filter-loader 插件，只有在 test 环境才出现 vconsole
+2. 修复微信分享 http 导致 error 报错，修改其中出现的域名的协议为当前页面的协议
+3. 升级 babel 的版本，支持写法
 
 可选链
 

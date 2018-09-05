@@ -57,6 +57,17 @@ http.interceptors.response.use(
       toLogin()
       return false
     }
+
+    // 判断微信
+    if (
+      config.data.appId &&
+      config.data.nonceStr &&
+      config.data.signature &&
+      config.data.timestamp
+    ) {
+      return config.data
+    }
+
     // reject错误处理
     return Promise.reject(new HttpError(config.data.resMsg, config.data))
   },

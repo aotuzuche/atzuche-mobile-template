@@ -1,5 +1,5 @@
 module.exports = function (source) {
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.PACKAGE === 'test') {
     return source
   } else {
     const match = /\/\/\s*?>>>(\s|.)*?\/\/\s*?<<</g
