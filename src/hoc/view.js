@@ -10,6 +10,7 @@
 
 import connect from 'src/redux/connect'
 import { WXShare } from 'src/utils/wx'
+import AS from 'src/utils/as'
 
 const VIEW = Comp => {
   @connect
@@ -19,6 +20,9 @@ const VIEW = Comp => {
 
       // 初始化微信分享
       this.WXShare()
+
+      // pv uv
+      AS()
     }
 
     // 微信分享

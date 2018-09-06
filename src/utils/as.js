@@ -1,14 +1,13 @@
 import qs from 'qs'
 
 async function AS(data = {}) {
-  let params = []
   if (typeof data.eventContent === 'object') {
+    let params = []
     Object.entries(data.eventContent).forEach(([key, value]) => {
       params.push(`${key}=${value}`)
     })
+    data.eventContent = `{${params.join(',')}}`
   }
-
-  const eventContent = `{${params.join(',')}}`
 
   // 防止 GC 掉用变量存储
   const random = 'img_' + Math.random()
@@ -20,14 +19,7 @@ async function AS(data = {}) {
 
   const currentOrigin = window.location.origin
   // 可以利用 qs 来格式化参数
-  img.src =
-    currentOrigin +
-    '/log.gif?' +
-    qs.stringify({
-      pageNo: data.pageNo,
-      eventNo: data.eventNo,
-      eventContent
-    })
+  img.src = currentOrigin + '/log.gif?' + qs.stringify(data)
 }
 
 export default AS
