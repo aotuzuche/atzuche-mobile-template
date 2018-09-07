@@ -2,6 +2,9 @@
 
 > 记录脚手架  文件变动
 
+### 2018-09-07 10:49:42
+1. fix htmlWebpackPlugin title 设置错误
+
 ### 2018-09-05 14:45:18
 
 1. 修改 auto-prod-filter-loader 插件，只有在 test 环境才出现 vconsole
