@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+// 设置背景图片
+@mixin bgImg($url) {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-image: url($url);
+}
+
+// 设置长宽
+@mixin wh($w, $h) {
+  width: $w;
+  height: $h;
+}
