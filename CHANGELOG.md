@@ -6,7 +6,8 @@
 1. fix htmlWebpackPlugin title 设置错误
 2. 自动给静态资源生成 preload/prefetch 属性, 提高页面加载性能
 3. 分割异步公用代码，减少代码体积，提高复用
-3. inline runtime.js 文件，减少首次加载请求
+4. inline runtime.js 文件，减少首次加载请求
+5. 修改 css 文件 hash -> contentHash，提高缓存生存周期
 
 ### 2018-09-05 14:45:18
 
