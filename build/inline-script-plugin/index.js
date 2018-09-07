@@ -57,6 +57,7 @@ class InlineScriptPlugin {
     return scripts.filter(function(script) {
       const isManifestScript =
         script.tagName === 'script' &&
+        script.attributes.src &&
         script.attributes.src.indexOf(manifestAssetName) >= 0
 
       if (isManifestScript) {

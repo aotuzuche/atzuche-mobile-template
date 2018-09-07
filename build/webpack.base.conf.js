@@ -7,6 +7,7 @@ const HappyPack = require('happypack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const InlineScriptPlugin = require('./inline-script-plugin')
+const isDev = process.env.NODE_ENV === 'development'
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -46,12 +47,15 @@ const webpackConfig = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: [
+          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader'
+        ]
       },
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           'px2rem-loader?remUnit=100',
           'postcss-loader',
@@ -67,7 +71,10 @@ const webpackConfig = {
       id: 'jsx',
       threads: 4,
       loaders: [
-        'babel-loader',
+        {
+          loader: 'babel-loader?cacheDirectory',
+          exclude: ['/node_modules/']
+        },
         {
           loader: './build/auto-import-loader',
           options: {
@@ -118,12 +125,14 @@ const webpackConfig = {
       chunksSortMode: 'dependency' // 按照不同文件的依赖关系来排序
     }),
 
+    new InlineScriptPlugin('runtime'),
+
     new InlineScriptPlugin('flexible'),
 
     // 提取公共样式
     new MiniCssExtractPlugin({
       // chunkFilename: "css/[name].[hash:7].css",
-      filename: 'css/[name].[hash:7].css',
+      filename: isDev ? 'css/[name].css' : 'css/[name].[contenthash:7].css',
       allChunks: true
     }),
 
