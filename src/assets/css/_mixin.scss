@@ -11,7 +11,33 @@
 }
 
 // 设置长宽
-@mixin wh($w, $h) {
-  width: $w;
-  height: $h;
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// 设置 flex
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+// 设置超出省略
+@mixin ellipsis($width: 100%, $display: inline-block) {
+  display: $display;
+  max-width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+// 修复浮动盒子空间
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
 }
