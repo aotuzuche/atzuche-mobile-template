@@ -5,6 +5,9 @@ const utils = require('./utils')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const APP_CONFIG = require('../appConfig.js')
+const address = require('address')
+
+const port = config[process.env.PACKAGE].port
 
 const baseWebpackConfig = require('./webpack.base.conf')
 // 针对生产环境修改配置
@@ -31,8 +34,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     new FriendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {
         messages: [
-          'You application is running here http://localhost:' +
-            config[process.env.PACKAGE].port
+          `
+          本地==> http://localhost:${port}
+          路由==> http://${address.ip()}:${port}
+          `
         ]
       }
     })
