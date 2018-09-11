@@ -115,7 +115,7 @@ const webpackConfig = {
     new HtmlWebpackPlugin({
       template: 'src/template.html',
       filename: 'index.html',
-      title: APP_CONFIG.title,
+      title: APP_CONFIG.title || '凹凸租车',
       inject: 'body', // 所有javascript资源将被注入至body底部
       minify: {
         removeComments: true, // 删除注释

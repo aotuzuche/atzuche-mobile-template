@@ -7,7 +7,7 @@ const merge = require('webpack-merge')
 const APP_CONFIG = require('../appConfig.js')
 const address = require('address')
 
-const port = config[process.env.PACKAGE].port
+const port = APP_CONFIG.port
 
 const baseWebpackConfig = require('./webpack.base.conf')
 // 针对生产环境修改配置
@@ -51,7 +51,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     inline: true,
     quiet: true,
     disableHostCheck: true,
-    port: APP_CONFIG.port,
+    port: port,
     proxy: {
       '/proxy/*': {
         target: APP_CONFIG.target,
