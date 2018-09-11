@@ -3,9 +3,10 @@ import { clearToken, toLogin } from 'src/utils/token'
 
 // type an error
 function HttpError(message, data) {
-  this.message = message
+  this.msg = message
   this.name = 'HttpError'
-  this.data = data || null
+  this.data = data ? (data?.data ? data.data : data) : null
+  this.code = data?.resCode || 0
 }
 HttpError.prototype = new Error()
 HttpError.prototype.constructor = HttpError
