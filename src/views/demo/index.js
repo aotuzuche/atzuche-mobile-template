@@ -18,7 +18,6 @@ export default class View extends PureComponent {
 
     console.log('test', this?.state?.a?.b)
     console.log(Object.values({ foo: 1, bar: 2 }))
-    this.WXShare()
     this.AS()
   }
 
