@@ -39,7 +39,6 @@ const http = axios.create({
  * 请求拦截器，在发起请求之前
  */
 http.interceptors.request.use(config => {
-  console.log('config', config)
   if (config.method === 'get') {
     if (typeof config.params !== 'object') {
       config.params = {}
