@@ -5,6 +5,7 @@
 ### 2018-09-12 18:02:27
 - http 加上 200101 错误号处理
 - toLogin 第一个参数支持传参
+- 增加 `openId` `unionId` `virtualNo` `memNo` 的操作方法
 
 #### 2018-09-11 10:35:13
 - 拦截器请求上加上 requestId
