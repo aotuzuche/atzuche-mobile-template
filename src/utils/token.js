@@ -7,30 +7,33 @@ const unionId = '_app_unionId_'
 const virtualNo = '_app_virtualNo_'
 const memNo = '_app_memNo_'
 
+const ls = window.localStorage
+const ss = window.sessionStorage
+
 // token的操作方法
-const getToken = e => localStorage.getItem(token)
-const setToken = e => localStorage.setItem(token, e)
-const clearToken = e => localStorage.removeItem(token)
+const getToken = e => ls.getItem(token)
+const setToken = e => ls.setItem(token, e)
+const clearToken = e => ls.removeItem(token)
 
 // openId 操作方法
-const getOpenId = e => localStorage.getItem(openId)
-const setOpenId = e => localStorage.setItem(openId, e)
-const clearOpenId = e => localStorage.removeItem(openId)
+const getOpenId = e => ss.getItem(openId)
+const setOpenId = e => ss.setItem(openId, e)
+const clearOpenId = e => ss.removeItem(openId)
 
 // unionId 操作方法
-const getUnionId = e => localStorage.getItem(unionId)
-const setUnionId = e => localStorage.setItem(unionId, e)
-const clearUnionId = e => localStorage.removeItem(unionId)
+const getUnionId = e => ss.getItem(unionId)
+const setUnionId = e => ss.setItem(unionId, e)
+const clearUnionId = e => ss.removeItem(unionId)
 
 // virtualNo 操作方法
-const getVirtualNo = e => localStorage.getItem(virtualNo)
-const setVirtualNo = e => localStorage.setItem(virtualNo, e)
-const clearVirtualNo = e => localStorage.removeItem(virtualNo)
+const getVirtualNo = e => ss.getItem(virtualNo)
+const setVirtualNo = e => ss.setItem(virtualNo, e)
+const clearVirtualNo = e => ss.removeItem(virtualNo)
 
 // memNo 操作方法
-const getMemNo = e => localStorage.getItem(memNo)
-const setMemNo = e => localStorage.setItem(memNo, e)
-const clearMemNo = e => localStorage.removeItem(memNo)
+const getMemNo = e => ss.getItem(memNo)
+const setMemNo = e => ss.setItem(memNo, e)
+const clearMemNo = e => ss.removeItem(memNo)
 
 /**
  * 初始化token
