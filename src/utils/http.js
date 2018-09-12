@@ -70,6 +70,13 @@ http.interceptors.response.use(
       toLogin()
       return false
     }
+    // 需要绑定
+    else if (config.data.resCode === '200101') {
+      toLogin({
+        isBind: true
+      })
+      return false
+    }
 
     // 判断微信
     if (

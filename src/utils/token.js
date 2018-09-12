@@ -45,7 +45,7 @@ export const initToken = async e => {
  * app: 打开原生登录模块
  * h5: 跳转到通用登录页面
  */
-export const toLogin = e => {
+export const toLogin = params => {
   if (window.isApp) {
     at.openLogin({
       success(res) {
@@ -59,9 +59,10 @@ export const toLogin = e => {
     })
   } else {
     clearToken()
-    const search = qs.stringify({
+    const search = {
       redirect: window.location.href
-    })
-    window.location.href = '/m/login/?' + search
+    }
+    params && Object.assign(search, params)
+    window.location.href = '/m/login/?' + qs.stringify(search)
   }
 }
