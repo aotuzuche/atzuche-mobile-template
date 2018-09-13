@@ -120,10 +120,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     // 将moduleid转为hash，提高缓存效果(没测试是将name转hash还是id转hash，应该是name，id的话就没意义了)
     new webpack.HashedModuleIdsPlugin(),
 
+    // new BundleAnalyzerPlugin(),
+
     // js包大小的报告，会生成stats.html于根目录下
     new Visualizer()
-
-    // new BundleAnalyzerPlugin()
   ],
 
   output: {

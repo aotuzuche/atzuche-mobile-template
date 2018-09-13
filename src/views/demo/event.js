@@ -1,4 +1,4 @@
-import { Toast } from 'auto'
+import { Toast } from 'auto-ui'
 
 export default class Event {
 

@@ -5,9 +5,7 @@ import TOOL from 'src/hoc/tool'
 import ComponentEvent from 'src/hoc/componentEvent'
 import Event from './event'
 
-import { Button } from 'auto-ui'
-console.log('Button', Button)
-
+import { Button, Layout, Cell } from 'auto-ui'
 
 @VIEW
 @TOOL

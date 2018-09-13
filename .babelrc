@@ -17,9 +17,9 @@
     [
       "component",
       {
-        "libraryName": "auto",
-        "style": true,
-        "ext": ".scss"
+        "libraryName": "auto-ui",
+        "libraryDirectory": "es",
+        "style": true
       }
     ],
     [

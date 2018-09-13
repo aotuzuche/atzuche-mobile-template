@@ -76,32 +76,6 @@ const webpackConfig = {
           exclude: ['/node_modules/']
         },
         {
-          loader: './build/auto-import-loader',
-          options: {
-            components: {
-              Layout: 'src/auto/lib/layout',
-              ActionSheet: 'src/auto/lib/action-sheet',
-              Button: 'src/auto/lib/button',
-              Cell: 'src/auto/lib/cell',
-              Dialog: 'src/auto/lib/dialog',
-              Input: 'src/auto/lib/input',
-              Spin: 'src/auto/lib/spin',
-              Popup: 'src/auto/lib/popup',
-              Radio: 'src/auto/lib/radio',
-              Select: 'src/auto/lib/select',
-              Switch: 'src/auto/lib/switch',
-              Tabs: 'src/auto/lib/tabs',
-              TimePicker: 'src/auto/lib/time-picker',
-              A: 'src/auto/lib/a'
-            },
-            include: [
-              resolve('src/views'),
-              resolve('src/components'),
-              resolve('src/containers')
-            ]
-          }
-        },
-        {
           loader: './build/auto-prod-filter-loader'
         },
         {
