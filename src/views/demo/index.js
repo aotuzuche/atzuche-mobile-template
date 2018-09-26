@@ -7,6 +7,8 @@ import Event from './event'
 
 import { Button, Layout, Cell } from 'auto-ui'
 
+console.log('Button', Button)
+
 @VIEW
 @TOOL
 @ComponentEvent('evt', Event)

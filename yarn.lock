@@ -1526,6 +1526,13 @@ babel-plugin-component@^1.1.1:
   dependencies:
     "@babel/helper-module-imports" "7.0.0-beta.35"
 
+babel-plugin-import@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-import/-/babel-plugin-import-1.9.1.tgz#ceb3b37e4920cec094a075fee674fb3dddafc9c8"
+  dependencies:
+    "@babel/helper-module-imports" "^7.0.0"
+    "@babel/runtime" "^7.0.0"
+
 babel-plugin-react-css-modules@^3.4.0:
   version "3.4.0"
   resolved "http://registry.npm.taobao.org/babel-plugin-react-css-modules/download/babel-plugin-react-css-modules-3.4.0.tgz#83bdea1cb0a8c7d459dda28b1bf20af7428da37f"
