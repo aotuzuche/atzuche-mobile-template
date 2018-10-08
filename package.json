@@ -7,7 +7,7 @@
     "prod": "autos build",
     "dev": "autos dev",
     "test": "autos build -t",
-    "lint": "eslint src --fix --ext .js,.jsx",
+    "lint": "autos lint",
     "format": "prettier --write src/**/*.{js,jsx}"
   },
   "prettier": {
