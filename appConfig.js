@@ -22,6 +22,7 @@ module.exports = {
 
   // eslint 相关的配置
   eslintConfig: {
+    // 忽略的文件规则
     ignorePattern: ['flexible.js']
   }
 }
