@@ -1343,8 +1343,9 @@ autoprefixer@^9.1.5:
     postcss "^7.0.2"
     postcss-value-parser "^3.2.3"
 
-autos@../autos:
-  version "0.0.8"
+autos@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/autos/-/autos-0.0.9.tgz#204c4b13c0248be8226c3a1db10c29824365aab7"
   dependencies:
     "@babel/cli" "^7.0.0"
     "@babel/core" "^7.0.0"
