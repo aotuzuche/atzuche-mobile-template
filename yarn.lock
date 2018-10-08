@@ -1343,9 +1343,8 @@ autoprefixer@^9.1.5:
     postcss "^7.0.2"
     postcss-value-parser "^3.2.3"
 
-autos@^0.0.8:
+autos@../autos:
   version "0.0.8"
-  resolved "https://registry.yarnpkg.com/autos/-/autos-0.0.8.tgz#e3ae7793bd802d313e12026d3f07a498c807c2fb"
   dependencies:
     "@babel/cli" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -1384,10 +1383,17 @@ autos@^0.0.8:
     deepmerge "^2.1.1"
     download-git-repo "^1.1.0"
     ejs "^2.6.1"
-    eslint "^5.3.0"
+    eslint "^5.5.0"
     eslint-config-airbnb "^17.1.0"
+    eslint-config-standard "^11.0.0"
     eslint-loader "^2.1.1"
+    eslint-plugin-import "^2.14.0"
     eslint-plugin-jsx-a11y "^6.1.1"
+    eslint-plugin-node "^7.0.1"
+    eslint-plugin-promise "^4.0.0"
+    eslint-plugin-react "^7.11.1"
+    eslint-plugin-standard "^4.0.0"
+    execa "^1.0.0"
     file-loader "^1.1.6"
     friendly-errors-webpack-plugin "^1.7.0"
     fs-extra "^7.0.0"
@@ -1409,8 +1415,8 @@ autos@^0.0.8:
     px2rem "^0.5.0"
     px2rem-loader "^0.1.9"
     react-css-modules "^4.7.1"
+    readline "^1.3.0"
     sass-loader "^6.0.6"
-    shelljs "^0.8.2"
     source-map-url "^0.4.0"
     style-loader "^0.19.1"
     sw-precache-webpack-plugin "^0.11.5"
@@ -3468,6 +3474,12 @@ debug@^3.1.0:
   dependencies:
     ms "2.0.0"
 
+debug@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.0.1.tgz#f9bb36d439b8d1f0dd52d8fb6b46e4ebb8c1cd5b"
+  dependencies:
+    ms "^2.1.1"
+
 decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/decamelize/download/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
@@ -4045,7 +4057,7 @@ eslint-config-airbnb@^17.1.0:
 
 eslint-config-standard@^11.0.0:
   version "11.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-11.0.0.tgz#87ee0d3c9d95382dc761958cbb23da9eea31e0ba"
+  resolved "http://registry.npmjs.org/eslint-config-standard/-/eslint-config-standard-11.0.0.tgz#87ee0d3c9d95382dc761958cbb23da9eea31e0ba"
 
 eslint-import-resolver-node@^0.3.1:
   version "0.3.2"
@@ -4118,8 +4130,8 @@ eslint-plugin-node@^7.0.1:
     semver "^5.5.0"
 
 eslint-plugin-promise@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-4.0.0.tgz#bc15a4aa04fa6116113b6c47488c421821b758fc"
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-4.0.1.tgz#2d074b653f35a23d1ba89d8e976a985117d1c6a2"
 
 eslint-plugin-react@^7.11.1:
   version "7.11.1"
@@ -4161,58 +4173,15 @@ eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
-eslint@^5.3.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.6.0.tgz#b6f7806041af01f71b3f1895cbb20971ea4b6223"
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    ajv "^6.5.3"
-    chalk "^2.1.0"
-    cross-spawn "^6.0.5"
-    debug "^3.1.0"
-    doctrine "^2.1.0"
-    eslint-scope "^4.0.0"
-    eslint-utils "^1.3.1"
-    eslint-visitor-keys "^1.0.0"
-    espree "^4.0.0"
-    esquery "^1.0.1"
-    esutils "^2.0.2"
-    file-entry-cache "^2.0.0"
-    functional-red-black-tree "^1.0.1"
-    glob "^7.1.2"
-    globals "^11.7.0"
-    ignore "^4.0.6"
-    imurmurhash "^0.1.4"
-    inquirer "^6.1.0"
-    is-resolvable "^1.1.0"
-    js-yaml "^3.12.0"
-    json-stable-stringify-without-jsonify "^1.0.1"
-    levn "^0.3.0"
-    lodash "^4.17.5"
-    minimatch "^3.0.4"
-    mkdirp "^0.5.1"
-    natural-compare "^1.4.0"
-    optionator "^0.8.2"
-    path-is-inside "^1.0.2"
-    pluralize "^7.0.0"
-    progress "^2.0.0"
-    regexpp "^2.0.0"
-    require-uncached "^1.0.3"
-    semver "^5.5.1"
-    strip-ansi "^4.0.0"
-    strip-json-comments "^2.0.1"
-    table "^4.0.3"
-    text-table "^0.2.0"
-
 eslint@^5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.5.0.tgz#8557fcceab5141a8197da9ffd9904f89f64425c6"
+  version "5.6.1"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.6.1.tgz#348134e32ccc09abb2df1bf282b3f6eed8c7b480"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.5.3"
     chalk "^2.1.0"
     cross-spawn "^6.0.5"
-    debug "^3.1.0"
+    debug "^4.0.1"
     doctrine "^2.1.0"
     eslint-scope "^4.0.0"
     eslint-utils "^1.3.1"
@@ -4344,6 +4313,18 @@ execa@^0.8.0:
   dependencies:
     cross-spawn "^5.0.1"
     get-stream "^3.0.0"
+    is-stream "^1.1.0"
+    npm-run-path "^2.0.0"
+    p-finally "^1.0.0"
+    signal-exit "^3.0.0"
+    strip-eof "^1.0.0"
+
+execa@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-1.0.0.tgz#c6236a5bb4df6d6f15e88e7f017798216749ddd8"
+  dependencies:
+    cross-spawn "^6.0.0"
+    get-stream "^4.0.0"
     is-stream "^1.1.0"
     npm-run-path "^2.0.0"
     p-finally "^1.0.0"
@@ -4920,6 +4901,12 @@ get-stream@^2.2.0:
   dependencies:
     object-assign "^4.0.1"
     pinkie-promise "^2.0.0"
+
+get-stream@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-4.1.0.tgz#c1b255575f3dc21d59bfc79cd3d2b46b1c3a54b5"
+  dependencies:
+    pump "^3.0.0"
 
 get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"
@@ -6425,7 +6412,7 @@ load-json-file@^1.0.0:
 
 load-json-file@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
+  resolved "http://registry.npmjs.org/load-json-file/-/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
   dependencies:
     graceful-fs "^4.1.2"
     parse-json "^2.2.0"
@@ -6997,6 +6984,10 @@ move-concurrently@^1.0.1:
 ms@2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/ms/download/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
+
+ms@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
 
 multicast-dns-service-types@^1.1.0:
   version "1.1.0"
@@ -8759,6 +8750,13 @@ pump@^2.0.0, pump@^2.0.1:
     end-of-stream "^1.1.0"
     once "^1.3.1"
 
+pump@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/pump/-/pump-3.0.0.tgz#b4a2116815bde2f4e1ea602354e8c75565107a64"
+  dependencies:
+    end-of-stream "^1.1.0"
+    once "^1.3.1"
+
 pumpify@^1.3.3:
   version "1.5.0"
   resolved "http://registry.npm.taobao.org/pumpify/download/pumpify-1.5.0.tgz#30c905a26c88fa0074927af07256672b474b1c15"
@@ -9036,6 +9034,10 @@ readdirp@^2.0.0:
     minimatch "^3.0.2"
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
+
+readline@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/readline/-/readline-1.3.0.tgz#c580d77ef2cfc8752b132498060dc9793a7ac01c"
 
 recast@^0.12.5:
   version "0.12.9"
@@ -9362,13 +9364,13 @@ resolve-url@^0.2.1:
   version "0.2.1"
   resolved "http://registry.npm.taobao.org/resolve-url/download/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
 
-resolve@^1.1.6, resolve@^1.5.0, resolve@^1.6.0:
+resolve@^1.1.6:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.7.1.tgz#aadd656374fd298aee895bc026b8297418677fd3"
   dependencies:
     path-parse "^1.0.5"
 
-resolve@^1.3.2, resolve@^1.8.1:
+resolve@^1.3.2, resolve@^1.5.0, resolve@^1.6.0, resolve@^1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.8.1.tgz#82f1ec19a423ac1fbd080b0bab06ba36e84a7a26"
   dependencies:
@@ -9682,7 +9684,7 @@ shebang-regex@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/shebang-regex/download/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
 
-shelljs@^0.8.0, shelljs@^0.8.2:
+shelljs@^0.8.0:
   version "0.8.2"
   resolved "http://registry.npm.taobao.org/shelljs/download/shelljs-0.8.2.tgz#345b7df7763f4c2340d584abb532c5f752ca9e35"
   dependencies:

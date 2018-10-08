@@ -14,35 +14,19 @@
     "singleQuote": true,
     "semi": false
   },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "node": true,
-      "React": true
-    }
-  },
   "gitHooks": {
     "pre-commit": "yarn lint"
   },
   "author": "easonchiu",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^5.5.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-loader": "^2.1.1",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^4.0.0",
-    "eslint-plugin-react": "^7.11.1",
-    "eslint-plugin-standard": "^4.0.0",
     "yorkie": "^2.0.0"
   },
   "dependencies": {
     "add": "^2.0.6",
     "at-js-sdk": "^2.2.2",
     "auto-ui": "^0.0.9",
-    "autos": "^0.0.8",
+    "autos": "../autos",
     "axios": "^0.17.1",
     "classnames": "^2.2.5",
     "core-js": "^2.5.7",

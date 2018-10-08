@@ -18,5 +18,10 @@ module.exports = {
   target: 'http://testh5.atzuche.com/',
 
   // html 文档的标题
-  title: '<%= projectName %>'
+  title: '<%= projectName %>',
+
+  // eslint 相关的配置
+  eslintConfig: {
+    ignorePattern: ['flexible.js']
+  }
 }
