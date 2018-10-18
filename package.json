@@ -25,8 +25,9 @@
   "dependencies": {
     "add": "^2.0.6",
     "at-js-sdk": "^2.2.2",
+    "auto-libs": "^0.0.1",
     "auto-ui": "^0.0.9",
-    "autos": "^0.0.9",
+    "autos": "^0.1.2",
     "axios": "^0.17.1",
     "classnames": "^2.2.5",
     "core-js": "^2.5.7",

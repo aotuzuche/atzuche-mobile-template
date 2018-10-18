@@ -9,8 +9,7 @@
  */
 
 import connect from 'src/redux/connect'
-import { WXShare } from 'src/utils/wx'
-import AS from 'src/utils/as'
+import { WX, AS } from 'auto-libs'
 
 const VIEW = Comp => {
   @connect
@@ -27,7 +26,7 @@ const VIEW = Comp => {
 
     // 微信分享
     WXShare(config) {
-      return WXShare(config)
+      return WX.share(config)
     }
 
     render() {

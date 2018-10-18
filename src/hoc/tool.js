@@ -6,7 +6,7 @@
  */
 
 import qs from 'qs'
-import AS from 'src/utils/as'
+import { AS } from 'auto-libs'
 
 const TOOL = Comp => {
   class TOOLComponent extends Comp {
