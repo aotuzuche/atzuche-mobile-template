@@ -1546,10 +1546,10 @@ autoprefixer@^9.1.5:
     postcss "^7.0.2"
     postcss-value-parser "^3.2.3"
 
-autos@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/autos/-/autos-0.1.2.tgz#90410c12299150387987d90d8532df24b8af6679"
-  integrity sha512-mF2+EHdAnSrXCOgHfsh+v4otWB/ed7kmeAmydzAp/e6o/QaAusvJiq97RnGSiZPB1GZzT9Zsank28rwF2lILRA==
+autos@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/autos/-/autos-0.1.3.tgz#fc3c9412aabed3180b6af420b25e5f4e5796112a"
+  integrity sha512-3+emfxzkPGYSziBfg0gM748w5Zj32aeuCQpAirZSupCJiFh3oy5oP5/FTiK4pFiU63DXw4JHlMwhMYvdgC2NDw==
   dependencies:
     "@babel/cli" "^7.0.0"
     "@babel/core" "^7.0.0"
