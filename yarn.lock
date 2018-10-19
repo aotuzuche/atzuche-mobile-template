@@ -1499,10 +1499,10 @@ auto-libs@^0.0.2:
     qs "^6.5.2"
     weixin-js-sdk "^1.4.0-test"
 
-auto-ui@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/auto-ui/-/auto-ui-0.1.0.tgz#0dd6fe0b33ea64b757fc5c04a36797debe827b8e"
-  integrity sha512-wUV6SiJs3GUL2IzyG6vPFkqvIGSqmKLVuc44UsH9NVkmBBEJY9mHO5xKTQ9WmXQPkZatWjL59LV6NxfYL1KnIw==
+auto-ui@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/auto-ui/-/auto-ui-0.1.1.tgz#5c3fc92c6a5fb476f3ceb8902044fef5148e801b"
+  integrity sha512-afEzfeMVQBl9bVvF6hHGIrBrlXs7sy6zVURlsKuCkI5CNamq5YWXH3DxWyVbJBjpPEYVM0oXnQYT9RtCUA81wA==
   dependencies:
     auto-libs "^0.0.2"
     classnames "^2.2.6"
