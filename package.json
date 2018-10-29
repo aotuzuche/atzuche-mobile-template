@@ -51,5 +51,38 @@
     "weixin-js-sdk": "^1.3.3",
     "why-did-you-update": "^0.1.1",
     "yarn": "^1.7.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint-config-alloy/react"
+    ],
+    "rules": {
+      "semi": 0,
+      "indent": [
+        "error",
+        2,
+        {
+          "SwitchCase": 1,
+          "flatTernaryExpressions": true
+        }
+      ],
+      "no-param-reassign": 0,
+      "no-extend-native": 0,
+      "no-proto": 0,
+      "react/jsx-indent": [
+        "error",
+        2
+      ],
+      "react/jsx-indent-props": [
+        "error",
+        2
+      ]
+    },
+    "settings": {
+      "react": {
+        "pragma": "React",
+        "version": "16.3.2"
+      }
+    }
   }
 }
