@@ -12,7 +12,7 @@ console.log('Button', Button)
 @VIEW
 @TOOL
 @ComponentEvent('evt', Event)
-export default class View extends PureComponent {
+class View extends PureComponent {
   constructor(props) {
     super(props)
 
@@ -66,3 +66,5 @@ export default class View extends PureComponent {
     )
   }
 }
+
+export default View
