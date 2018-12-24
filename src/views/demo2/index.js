@@ -1,13 +1,11 @@
 import './style'
-import React, { PureComponent } from 'react'
+import React from 'react'
 import VIEW from 'src/hoc/view'
-import ComponentEvent from 'src/hoc/componentEvent'
 import Event from './event'
 
 import { Button, Layout, Cell } from 'auto-ui'
 @VIEW
-@ComponentEvent('evt', Event)
-class View extends PureComponent {
+class View extends Event {
   constructor(props) {
     super(props)
 
@@ -21,23 +19,23 @@ class View extends PureComponent {
 
     return (
       <Layout className="view-demo">
-        <Layout.Header title="Redux" onBackClick={this.evt.goBack} />
+        <Layout.Header title="Redux" onBackClick={this.goBack} />
 
         <Layout.Body>
           <div className="buttons">
-            <Button mini onClick={this.evt.pop}>
+            <Button mini onClick={this.pop}>
               Pop
             </Button>
-            <Button mini onClick={this.evt.push}>
+            <Button mini onClick={this.push}>
               Push
             </Button>
-            <Button mini onClick={this.evt.clear}>
+            <Button mini onClick={this.clear}>
               Clear
             </Button>
             <Button
               loading={this.state.loading}
               mini
-              onClick={this.evt.asyncPush}
+              onClick={this.asyncPush}
             >
               Async Push
             </Button>

@@ -57,7 +57,10 @@
       "eslint-config-alloy/react"
     ],
     "rules": {
-      "semi": 0,
+      "semi": [
+        "error",
+        "never"
+      ],
       "indent": [
         "error",
         2,
@@ -72,7 +75,7 @@
       "no-param-reassign": 0,
       "no-extend-native": 0,
       "no-script-url": 0,
-      "no-proto": 0,
+      "no-proto": "error",
       "react/jsx-indent": [
         "error",
         2

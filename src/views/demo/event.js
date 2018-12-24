@@ -1,7 +1,7 @@
+import { PureComponent } from 'react'
 import { Toast } from 'auto-ui'
 
-export default class Event {
-
+export default class Event extends PureComponent {
   goBack = () => {
     this.props.history.goBack()
   }
@@ -21,19 +21,16 @@ export default class Event {
   asyncPush = async () => {
     try {
       this.setState({
-        loading: true,
+        loading: true
       })
 
       await this.props.$demo.asyncPush()
-    }
-    catch (e) {
+    } catch (e) {
       Toast.show(e.message)
-    }
-    finally {
+    } finally {
       this.setState({
-        loading: false,
+        loading: false
       })
     }
   }
-
 }
