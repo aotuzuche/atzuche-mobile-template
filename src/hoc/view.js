@@ -16,6 +16,7 @@ const VIEW = Comp => {
   class VIEWComponent extends Comp {
     constructor(props) {
       super(props)
+      this.state = {}
 
       // 初始化微信分享
       this.WXShare()

@@ -19,7 +19,6 @@ class View extends Event {
     }
 
     console.log('test', this?.state?.a?.b)
-    console.log(Object.values({ foo: 1, bar: 2 }))
     this.AS()
   }
 

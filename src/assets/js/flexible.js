@@ -1,3 +1,4 @@
+/* eslint-disable */
 ;(function(window, lib) {
   var tid
   var document = window.document
@@ -37,8 +38,8 @@
       ? devicePixelRatio >= 3 && (!dpr || dpr >= 3)
         ? 3
         : devicePixelRatio >= 2 && (!dpr || dpr >= 2)
-          ? 2
-          : 1
+        ? 2
+        : 1
       : 1
     scale = 1 / dpr
   }
