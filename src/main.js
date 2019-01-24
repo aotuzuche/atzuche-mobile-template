@@ -10,8 +10,8 @@ import 'auto-libs/build/styles/reset'
 import 'auto-libs/build/scripts/flexible'
 
 // some utils
-import 'src/utils/inputEvents'
-import 'src/utils/dateFormat'
+import 'auto-libs/build/scripts/inputEvents'
+import 'auto-libs/build/scripts/date'
 
 // at-app configure
 import 'src/conf/at'

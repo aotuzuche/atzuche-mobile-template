@@ -1500,9 +1500,9 @@ auto-libs@^0.0.7:
     weixin-js-sdk "^1.4.0-test"
 
 auto-libs@latest:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/auto-libs/-/auto-libs-0.1.0.tgz#8d0b82ed519de6e7e8ca487cc468c74e90edec8d"
-  integrity sha512-Ey1WUfwFJXYC/FjCHwzBO242r2mVXHCUCjoi6zIOEmWqyEJpLPm1a6QO+ojl/PqNRnOV4oR3ZEtkb4AMm1FxBQ==
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/auto-libs/-/auto-libs-0.1.1.tgz#88be12be7c0f27dc10b71b57bfc5d8f319d828e5"
+  integrity sha512-VxjdbJPUpnHjm6O0bh6p/IBwTOF6iRuA1FdS54FN8pf8VgLHkbRh70dHpZnfCHODy/5hXJ10Qptzy0649TUZRQ==
   dependencies:
     at-js-sdk "^2.2.2"
     axios "^0.18.0"
@@ -1558,9 +1558,9 @@ autoprefixer@^9.1.5:
     postcss-value-parser "^3.3.1"
 
 autos@latest:
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/autos/-/autos-0.1.16.tgz#38d1a76d64d87520f6f8315ae956151e83e1d3f2"
-  integrity sha512-0KVGNjBCLzv0eUs9Ie1p6aPEwU2alzkcnBUtsxl3SD31Tgn7Hb3/YlKu4h1rELBN1ESUBTOghP1mxmTmV2K6Yg==
+  version "0.1.17"
+  resolved "https://registry.yarnpkg.com/autos/-/autos-0.1.17.tgz#ee34ef65b4937be0179281c1129a5bbb8dff6891"
+  integrity sha512-qbnWn4zx02ztvlfw6pwfZhl7ao0/ek8Az2rriX9bPeN5Fbx6sMb1wCCBZXELNiN1nB47c3ehRpfZagczXbaq9A==
   dependencies:
     "@babel/cli" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -12296,9 +12296,9 @@ write@^0.2.1:
     mkdirp "^0.5.1"
 
 ws@^6.0.0:
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-6.1.2.tgz#3cc7462e98792f0ac679424148903ded3b9c3ad8"
-  integrity sha512-rfUqzvz0WxmSXtJpPMX2EeASXabOrSMk1ruMOV3JBTBjo4ac2lDjGGsbQSyxj8Odhw5fBib8ZKEjDNvgouNKYw==
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-6.1.3.tgz#d2d2e5f0e3c700ef2de89080ebc0ac6e1bf3a72d"
+  integrity sha512-tbSxiT+qJI223AP4iLfQbkbxkwdFcneYinM2+x46Gx2wgvbaOMO36czfdfVUBRTHvzAMRhDd98sA5d/BuWbQdg==
   dependencies:
     async-limiter "~1.0.0"
 
