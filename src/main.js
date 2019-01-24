@@ -4,10 +4,10 @@ window.Set = require('es6-set')
 window.Map = require('es6-map')
 
 // reset css
-import '$assets/css/reset'
+import 'auto-libs/build/styles/reset'
 
 // 使用老淘宝的 flexible 布局方案
-import '$assets/js/flexible'
+import 'auto-libs/build/scripts/flexible'
 
 // some utils
 import 'src/utils/inputEvents'
