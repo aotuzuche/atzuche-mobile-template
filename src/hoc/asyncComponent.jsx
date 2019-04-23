@@ -5,7 +5,7 @@
 
 import React, { PureComponent } from 'react'
 
-const AsyncComponent = comp => {
+const AsyncComponent = (comp) => {
   class Comp extends PureComponent {
     constructor(props) {
       super(props)
@@ -21,11 +21,11 @@ const AsyncComponent = comp => {
       }
 
       comp()
-        .then(module => module.default)
-        .then(Component => {
+        .then((module) => module.default)
+        .then((Component) => {
           this.setState({ Component })
         })
-        .catch(err => {
+        .catch((err) => {
           console.error(`Cannot load component in <AsyncComponent />`)
           throw err
         })

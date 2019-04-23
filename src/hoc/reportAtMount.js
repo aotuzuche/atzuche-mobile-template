@@ -26,7 +26,7 @@ function report(data, url) {
   image.src = url + (url.indexOf('?') < 0 ? '?' : '&') + items.join('&')
 }
 
-const ReportAtMountComponent = Comp => {
+const ReportAtMountComponent = (Comp) => {
   class ReportAtMount extends Comp {
     componentDidMount() {
       if (super.componentDidMount) {
@@ -35,12 +35,7 @@ const ReportAtMountComponent = Comp => {
 
       const search = this.search
       // 这4个值中只要有一个不为空，那就存下来，为空的值存空值
-      if (
-        search.utm_source ||
-        search.utm_medium ||
-        search.utm_campaign ||
-        search.utm_term
-      ) {
+      if (search.utm_source || search.utm_medium || search.utm_campaign || search.utm_term) {
         cookie.set('utm_source', search.utm_source || '')
         cookie.set('utm_medium', search.utm_medium || '')
         cookie.set('utm_campaign', search.utm_campaign || '')

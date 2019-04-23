@@ -40,18 +40,14 @@ class View extends Event {
             <Button mini onClick={this.clear}>
               Clear
             </Button>
-            <Button
-              loading={this.state.loading}
-              mini
-              onClick={this.asyncPush}
-            >
+            <Button loading={this.state.loading} mini onClick={this.asyncPush}>
               Async Push
             </Button>
           </div>
 
           {list.length ? (
             <Cell>
-              {list.map(res => (
+              {list.map((res) => (
                 <Cell.Row key={res}>item: {res}</Cell.Row>
               ))}
             </Cell>

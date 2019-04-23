@@ -19,7 +19,7 @@
 import React, { PureComponent } from 'react'
 import { initToken, toLogin } from 'auto-libs/lib/token'
 
-const AsyncPreLogin = Compnent => {
+const AsyncPreLogin = (Compnent) => {
   class Comp extends PureComponent {
     constructor(props) {
       super(props)

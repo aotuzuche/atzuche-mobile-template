@@ -26,7 +26,7 @@ export default class Event extends PureComponent {
 
       await this.props.$demo.asyncPush()
     } catch (e) {
-      Toast.show(e.message)
+      Toast(e.message)
     } finally {
       this.setState({
         loading: false

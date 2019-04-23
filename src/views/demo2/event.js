@@ -2,23 +2,23 @@ import { PureComponent } from 'react'
 import { Toast } from 'auto-ui'
 
 export default class Event extends PureComponent {
-  goBack = e => {
+  goBack = (e) => {
     this.props.history.goBack()
   }
 
-  pop = e => {
+  pop = (e) => {
     this.props.$demo.pop()
   }
 
-  push = e => {
+  push = (e) => {
     this.props.$demo.push()
   }
 
-  clear = e => {
+  clear = (e) => {
     this.props.$demo.clear()
   }
 
-  asyncPush = async e => {
+  asyncPush = async (e) => {
     try {
       this.setState({
         loading: true
@@ -26,7 +26,7 @@ export default class Event extends PureComponent {
 
       await this.props.$demo.asyncPush()
     } catch (e) {
-      Toast.show(e.msg)
+      Toast(e.msg)
     } finally {
       this.setState({
         loading: false

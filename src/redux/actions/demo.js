@@ -8,8 +8,6 @@ const clear = createAction('DEMO_CLEAR')
 // 异步处理
 const _asyncPush = createAction('DEMO_ASYNC_PUSH')
 
-
-
 const asyncPush = (payload = {}) => async (dispatch) => {
   await new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -19,7 +17,6 @@ const asyncPush = (payload = {}) => async (dispatch) => {
 
   dispatch(_asyncPush())
 }
-
 
 export default {
   asyncPush,

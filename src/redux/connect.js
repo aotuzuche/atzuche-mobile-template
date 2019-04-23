@@ -3,11 +3,11 @@ import { connect } from 'react-redux'
 
 import actions from 'src/redux/actions'
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   ...state
 })
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   let list = {}
   for (let i in actions) {
     if (actions.hasOwnProperty(i)) {
@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => {
   return list
 }
 
-export default Component =>
+export default (Component) =>
   connect(
     mapStateToProps,
     mapDispatchToProps

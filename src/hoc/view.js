@@ -11,7 +11,7 @@
 import connect from 'src/redux/connect'
 import { WX, AS } from 'auto-libs'
 
-const VIEW = Comp => {
+const VIEW = (Comp) => {
   @connect
   class VIEWComponent extends Comp {
     constructor(props) {

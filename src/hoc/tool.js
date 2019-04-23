@@ -8,16 +8,14 @@
 import qs from 'qs'
 import { AS } from 'auto-libs'
 
-const TOOL = Comp => {
+const TOOL = (Comp) => {
   class TOOLComponent extends Comp {
     AS(data) {
       return AS(data)
     }
 
     get search() {
-      return this.props.location
-        ? qs.parse(this.props.location.search.replace(/^\?/, ''))
-        : {}
+      return this.props.location ? qs.parse(this.props.location.search.replace(/^\?/, '')) : {}
     }
 
     get params() {
