@@ -15,5 +15,8 @@ module.exports = {
   target: 'http://testh5.atzuche.com/',
 
   // html 文档的标题
-  title: '<%= projectName %>'
+  title: '<%= projectName %>',
+
+  // 允许 webpack 解析的路径
+  includeFiles: ['node_modules/auto-libs', 'node_modules/auto-ui']
 }
